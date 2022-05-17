@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" media="screen" href="css/main.css">
+        <!-- <link rel="JavaScript" href="script.js"> -->
+        <meta charset='utf-8'>
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+        <title>Mother</title>
+
+    <body>
+        <div id="container">
+            <div id="inner_container">
+                <img id="image_shower"/>
+            </div>
+            <div id="button_container">
+                <button onclick="get_random_image()"></button>
+            </div>
+        </div>
+
+        <script>
+            image_array = [
+                'Lilith10.png',
+                'Lilith11.png',
+                'Lilith12.png',
+                'Lilith13.png',
+                'Lilith14.png']
+
+            function get_random_image(){
+                random_index = Math.floor(Math.random() * image_array.lenght);
+                selected_image = image_array[random_index]
+                document.getElementById('image_shower').src = './images/$selected_image}'}
+
+        </script>
+    </body>
