@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Image Generator</title>
+	<style>
+		* {
+			margin: 0%;
+			padding: 0%;
+			box-sizing: border-box;
+
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		body {
+			background: rgba(120, 16, 180, 0.767);
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.container {
+			margin: 1.5vh 20vw;
+			margin-top: 10vh;
+			text-align: center;
+			background: rgb(39, 188, 209);
+			background: linear-gradient(118deg,
+					rgba(39, 188, 209, 0.9783263647255778) 0%,
+					rgba(6, 14, 101, 1) 100%);
+			opacity: 0.9;
+			color: white;
+			padding: 10px 10vw;
+			border-radius: 20px;
+			min-height: 15vh;
+		}
+
+		h1 {
+			text-transform: uppercase;
+		}
+
+		section {
+			height: 50vh;
+			width: 100%;
+			margin-top: -50px;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<br>
+		<h1>Geeks For Geeks Courses</h1><br>
+		<p>
+		With the idea of imparting programming knowledge,
+		Mr. Sandeep Jain, an IIT Roorkee alumnus started a dream,
+		GeeksforGeeks. Whether programming excites you or you
+		feel stifled, wondering how to prepare for interview
+		questions or how to ace data structures and algorithms,
+		GeeksforGeeks is a one-stop solution.
+		</p>
+
+		<br><br><br>
+		<section></section>
+		<br>
+	</div>
+	<script>
+		const pics = [
+			'url(
+"https://media.geeksforgeeks.org/wp-content/uploads/20200316135008/red7.png")',
+			'url(
+"https://media.geeksforgeeks.org/wp-content/uploads/20200316135014/yellow3.png")',
+			'url(
+"https://media.geeksforgeeks.org/img-practice/MaskGroup58@2x-min-1637846347.png")',
+			'url(
+"https://media.geeksforgeeks.org/img-practice/banner/dsa-self-paced-course-overview-image.png")',
+			'url(
+"https://media.geeksforgeeks.org/img-practice/banner/complete-interview-preparation-thumbnail.png")',
+			'url(
+"https://media.geeksforgeeks.org/img-practice/banner/Amazon-Test-Series-thumbnail.png")',
+			'url(
+"https://media.geeksforgeeks.org/img-practice/banner/dsa-self-paced-thumbnail.png")'
+		];
+		const pic = document.querySelector('section');
+
+		function showImage() {
+			var a = Math.floor(Math.random() * pics.length);
+			var img = pics[a];
+			pic.style.backgroundImage = img;
+		}
+
+		setInterval(showImage, 1000);
+	</script>
+</body>
+
+</html>
