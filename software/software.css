@@ -1,0 +1,27 @@
+body {
+    overflow-y: scroll;
+    font: 16px monospace, monospace
+}
+
+pre {
+    margin: 0;
+    overflow-x: hidden
+}
+
+@media(max-width:999px) {
+    #c {
+        display: block;
+        font-size: 1.94vw
+    }
+}
+
+@media(prefers-color-scheme:dark) {
+    body {
+        background: #000;
+        color: #fff
+    }
+
+    a {
+        color: #6CF
+    }
+}
